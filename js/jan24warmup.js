@@ -14,14 +14,27 @@
 // }
 //
 // sumStr();
+//
+// function sumDigitsFromString(str) {
+//     var sum = 0;
+//     var numbers = str.match(/\d+/g).map(Number);
+//     for (var i = 0; i < numbers.length; i++) {
+//         sum += numbers[i];
+//     }
+//     console.log(sum);
+// }
+// let str = "42958372"
+// sumDigitsFromString();
 
-function sumDigitsFromString(str) {
-    var sum = 0;
-    var numbers = str.match(/\d+/g).map(Number);
-    for (var i = 0; i < numbers.length; i++) {
-        sum += numbers[i];
-    }
-    console.log(sum);
-}
-let str = "42958372"
-sumDigitsFromString();
+// let numlist = "4 2 5 8 3 7 2";
+// let array1 = numlist.split('');
+// const reducer = (previousValue , currentValue) => previousValue + currentValue;
+//
+// console.log(array1.reduce(reducer));
+let numlist = "4,2,5,8,3,7,2";
+const array1 = numlist.split(" ,");
+const reducer = (previousValue, currentValue) => previousValue + currentValue;
+
+// 1 + 2 + 3 + 4
+console.log(array1.reduce(reducer));
+// expected output: 10
