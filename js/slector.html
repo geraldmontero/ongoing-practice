@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
+    <title>Contact</title>
+    <!-- Delete these later -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <style>
+        /*@import url(‘https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap’);*/
+        /*@import url(‘https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic’);*/
+        /*@import url(‘https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap’);*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: ‘Poppins’, sans-serif;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+        .button {
+            background: darkgrey;
+            display: block;
+            width:250px;
+            height:250px;
+            color: black;
+            text-decoration: none;
+        }
+        .button:hover {
+            color: black;
+            background: lightgrey;
+        }
+        .button:active {
+            color: black;
+            background: red;
+        }
+        .button-selected {
+            color: black;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex">
+            <!-- Select By Class : Button -->
+            <a class="button m-1" title="A" data-id="1">
+                <h3>ID: 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores laborum neque quo
+                    tenetur unde! Aut beatae, eaque eius est ex facilis fugit, harum illo, ipsa laudantium
+                    molestias quaerat ut voluptatem!
+                </p>
+            </a>
+            <a class="button m-1" title="B" data-id="2" >
+            <h3>ID: 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores laborum neque quo
+                tenetur unde! Aut beatae, eaque eius est ex facilis fugit, harum illo, ipsa laudantium
+                molestias quaerat ut voluptatem!
+            </p>
+            </a>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+<script>
+    <!-- Select By Class : Button -->
+    let button = document.getElementsByClassName('button');
+    let container = document.querySelector('.container');
+    container.addEventListener('click', (e) => {
+        for(let i = 0; i < 2; i++) {
+            if (button[i].contains(e.target)) {
+                let oldSelectedButton = document.querySelector('.button-selected');
+                if (oldSelectedButton) oldSelectedButton.classList.remove('button-selected');
+                button[i].classList.add('button-selected');
+                console.log(button[i].getAttribute('data-id'));
+            }
+        }
+    });
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Message Manuel 'DZ' Dominguez, Michael Jones, Noah Bruno
+
+
+
+
+
+
+
+

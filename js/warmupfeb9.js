@@ -9,7 +9,7 @@
 //     console.log( subject.match(/[aeiou]/gi).length)
 // }
 
-let string = helicopter
+let string = "helicopter"
 function getVowels(string) {
     var m = str.match(/[aeiou]/gi);
     return m === null ? 0 : m.length;
